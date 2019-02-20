@@ -17,12 +17,12 @@ $A
 
 $PSEmailServer = "smtp.office365.com"
 $SMTPPort = 587
-$SMTPUsername = "cleber.lima@easynvest.com.br"
+$SMTPUsername = "cleber.lima@"
 $EncryptedPasswordFile = "C:\Temp\SSS.txt"
 $SecureStringPassword = Get-Content -Path $EncryptedPasswordFile | ConvertTo-SecureString
 $EmailCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $SMTPUsername,$SecureStringPassword
-$MailTo = "cleber.lima@easynvest.com.br"
-$MailFrom = "cleber.lima@easynvest.com.br"
+$MailTo = "cleber.lima@"
+$MailFrom = "cleber.lima@"
 $MailSubject = "Processo Virtual CLONE ETL "
 $MailBodyErro = "Copia ETL com ERRO. `n `n `n $e"
 $MailBodySucesso = "Copia ETL finalizada com sucesso. `n `n $A"
