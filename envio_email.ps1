@@ -9,12 +9,12 @@ $e = Get-ChildItem C:\Temp| Sort-Object -Property CreationTime | Select-Object -
 
 $PSEmailServer = "smtp.office365.com"
 $SMTPPort = 587
-$SMTPUsername = "cleber.lima@easynvest.com.br"
+$SMTPUsername = "Email"
 $EncryptedPasswordFile = "C:\Temp\SSS.txt"
 $SecureStringPassword = Get-Content -Path $EncryptedPasswordFile | ConvertTo-SecureString
 $EmailCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $SMTPUsername,$SecureStringPassword
-$MailTo = "cleber.lima@easynvest.com.br"
-$MailFrom = "cleber.lima@easynvest.com.br"
+$MailTo = "Email"
+$MailFrom = "Email"
 $MailSubject = "Processo ETL"
 $MailBodyErro = "Copia ETL com ERRO, `n `n `n $e"
 $MailBodySucesso = "Copia ETL finalizada com sucesso" ,"`n`n$A"
